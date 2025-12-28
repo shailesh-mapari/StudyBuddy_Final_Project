@@ -45,7 +45,11 @@ const ContactPage = () => {
       `Subject: ${formData.subject}%0A` +
       `Message: ${formData.message}`;
 
+<<<<<<< HEAD:src/components/ContactPage.jsx
+    const whatsappUrl = `https://wa.me/917887524135?text=${whatsappMessage}`;
+=======
     const whatsappUrl = `https://wa.me/919579987603?text=${whatsappMessage}`;
+>>>>>>> 9312460aee54dcbc0d17db09493480d9c3551bae:frontend/src/components/ContactPage.jsx
     window.open(whatsappUrl, "_blank");
     setTimeout(() => {
       setFormData({
