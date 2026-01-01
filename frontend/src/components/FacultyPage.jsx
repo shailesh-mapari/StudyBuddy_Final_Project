@@ -100,6 +100,7 @@ const FacultyPage = () => {
                       className={`${facultyStyles.socialIcon} ${facultyStyles.socialIconInstagram}`}
                     >
                       <Instagram className={facultyStyles.socialIconSvg} />
+                      
                     </a>
                   </div>
                 </div>

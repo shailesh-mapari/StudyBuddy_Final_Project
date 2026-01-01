@@ -55,7 +55,3 @@ const sampleTeachers = [
 ];
 
 export default sampleTeachers;
-<<<<<<< HEAD:src/assets/dummyFaculty.js
-=======
-
->>>>>>> 9312460aee54dcbc0d17db09493480d9c3551bae:frontend/src/assets/dummyFaculty.js

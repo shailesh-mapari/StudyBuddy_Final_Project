@@ -790,11 +790,7 @@ export const facultyStyles = {
   socialIconEmail: "bg-gradient-to-br from-green-100 to-green-300",
   socialIconLinkedin: "bg-gradient-to-br from-sky-100 to-blue-300",
   socialIconInstagram: "bg-gradient-to-br from-purple-200 to-pink-600",
-<<<<<<< HEAD:src/assets/dummyStyles.js
-  socialIconSvg: "w-4 h-4 sm:w-5 sm:h-5 text-grey-900",
-=======
   socialIconSvg: "w-4 h-4 sm:w-5 sm:h-5 text-gray-900",
->>>>>>> 9312460aee54dcbc0d17db09493480d9c3551bae:frontend/src/assets/dummyStyles.js
 
   // CSS Animations and Utilities
   animations: `

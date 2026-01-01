@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { contactStyles } from "../assets/dummyStyles";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import {
-  CookingPot,
   Mailbox,
   MessageCircle,
   MessageCircleDashed,
@@ -11,6 +10,7 @@ import {
   SendHorizonal,
   User,
 } from "lucide-react";
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -19,6 +19,7 @@ const ContactPage = () => {
     subject: "",
     message: "",
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [phoneError, setPhoneError] = useState("");
   const handleChange = (e) => {
@@ -31,10 +32,11 @@ const ContactPage = () => {
   };
 
   const validatePhone = (phone) => /^\d{10}$/.test(phone);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validatePhone(formData.phone)) {
-      setPhoneError("please enter a valid 10-digit mobile number");
+      setPhoneError("Please enter a valid 10-digit phone number");
       return;
     }
     setIsSubmitting(true);
@@ -45,11 +47,7 @@ const ContactPage = () => {
       `Subject: ${formData.subject}%0A` +
       `Message: ${formData.message}`;
 
-<<<<<<< HEAD:src/components/ContactPage.jsx
     const whatsappUrl = `https://wa.me/917887524135?text=${whatsappMessage}`;
-=======
-    const whatsappUrl = `https://wa.me/919579987603?text=${whatsappMessage}`;
->>>>>>> 9312460aee54dcbc0d17db09493480d9c3551bae:frontend/src/components/ContactPage.jsx
     window.open(whatsappUrl, "_blank");
     setTimeout(() => {
       setFormData({
@@ -77,17 +75,16 @@ const ContactPage = () => {
         <div className={contactStyles.header}>
           <h1 className={contactStyles.title}>Contact Us</h1>
         </div>
+
         <div className={contactStyles.mainSection}>
           <div className={contactStyles.formContainer}>
             <div className={contactStyles.formGlow1}></div>
             <div className={contactStyles.formGlow2}></div>
             <div className={contactStyles.formGlow3}></div>
+
             <div className={contactStyles.form}>
-              <form
-                className={contactStyles.formElements}
-                onSubmit={handleSubmit}
-              >
-                {/*name + email */}
+              <form action={contactStyles.formElements} onSubmit={handleSubmit}>
+                {/*name +Email */}
                 <div className={contactStyles.formGrid}>
                   <div className={contactStyles.formGroup}>
                     <label className={contactStyles.label}>
@@ -97,7 +94,7 @@ const ContactPage = () => {
                       Full Name *
                     </label>
                     <input
-                      type="text "
+                      type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
@@ -107,6 +104,7 @@ const ContactPage = () => {
                     />
                   </div>
 
+                  {/*+Email */}
                   <div className={contactStyles.formGroup}>
                     <label className={contactStyles.label}>
                       <Mailbox
@@ -120,12 +118,11 @@ const ContactPage = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className={`${contactStyles.input} ${contactStyles.colors.blue.focus} ${contactStyles.colors.purple.hover}`}
-                      placeholder="Enter your Email"
+                      className={`${contactStyles.input} ${contactStyles.colors.blue.focus} ${contactStyles.colors.blue.hover}`}
+                      placeholder="Enter your email"
                     />
                   </div>
                 </div>
-
                 {/* Phone */}
                 <div className={contactStyles.formGroup}>
                   <label className={contactStyles.label}>
@@ -180,12 +177,10 @@ const ContactPage = () => {
                   </select>
                 </div>
 
-                {/* Message */}
-
                 <div className={contactStyles.formGroup}>
                   <label className={contactStyles.label}>
                     <MessageCircleDashed
-                      className={`${contactStyles.labelIcon} ${contactStyles.colors.blue.icon} `}
+                      className={`${contactStyles.labelIcon} ${contactStyles.colors.blue.icon}`}
                     />
                     Message *
                   </label>
@@ -200,7 +195,7 @@ const ContactPage = () => {
                   ></textarea>
                 </div>
                 <button
-                  type="Submit"
+                  type="submit"
                   disabled={!isFormValid || isSubmitting}
                   className={`${contactStyles.submitButton} ${
                     isFormValid && !isSubmitting
@@ -208,9 +203,10 @@ const ContactPage = () => {
                       : contactStyles.submitButtonDisabled
                   }`}
                 >
+                  {" "}
                   {isSubmitting ? (
                     <>
-                      <div className={contactStyles.spinner}>Sending...</div>
+                      <div className={contactStyles.spinner}>sending...</div>
                     </>
                   ) : (
                     <>
@@ -223,7 +219,7 @@ const ContactPage = () => {
             </div>
           </div>
 
-          {/* img  Animation Section */}
+          {/* Animation Section */}
           <div className={contactStyles.animationContainer}>
             <div className={contactStyles.animationWrapper}>
               <DotLottieReact
@@ -240,12 +236,12 @@ const ContactPage = () => {
           </div>
         </div>
 
-        {/*footer info msg*/}
+        {/*footer info */}
         <div className={contactStyles.footer}>
           <div className={contactStyles.footerBadge}>
             <MessageCircle className={contactStyles.footerIcon} />
             <span className={contactStyles.footerText}>
-              All Message are sent directly to whatsApp for immediate response.
+              All messages are sent directly to whatsApp for immediate response.
             </span>
           </div>
         </div>
