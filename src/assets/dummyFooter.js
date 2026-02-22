@@ -11,14 +11,14 @@ export const socialIcons = [
     iconKey: "Instagram",
     color: "from-pink-400 to-purple-500",
     bgColor: "bg-gradient-to-br from-pink-50 to-purple-100",
-    url: "https://www.instagram.com/hexagondigitalservices?igsh=MWp2NG1oNTlibWVnZA%3D%3D",
+    url: "https://www.instagram.com/vedantmahajan07?igsh=MTdmNTBibGtmZWY5Yw==",
   },
   {
     name: "LinkedIn",
     iconKey: "Linkedin",
     color: "from-blue-500 to-blue-700",
     bgColor: "bg-gradient-to-br from-blue-50 to-blue-100",
-    url: "https://www.linkedin.com/company/hexagondigtial-services/",
+    url: "https://www.linkedin.com/shailesh-mapari-4a3746307",
   },
 ];
 
@@ -37,13 +37,13 @@ export const supportLinks = [
 ];
 
 export const contactInfo = {
-  addressLine1: "123 Triveni Nagar",
-  city: "Lucknow",
-  phone: "+91 8299431275",
+  addressLine1: "G-25 Padampura",
+  city: "Chh.Sambhajinagar",
+  phone: "+91 7887524135",
   phoneHours: "Mon-Fri, 9AM-6PM",
-  email: "hexagonsservices@gmail.com",
+  email: "maparishailesh721@gmail.com",
   website: "https://hexagondigitalservices.com",
-  designBy: "HexagonDigitalServices",
+  designBy: "HexagonAVS",
 };
 
 export default {

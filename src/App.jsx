@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import { ArrowUp } from "lucide-react";
 import CourseDetailsPageHome from "./pages/CourseDetailsPageHome";
 import CourseDetailPage from "./pages/CourseDetailPage";
+import MyCoursePage from "./pages/MyCoursePage";
+import VerifyPaymentPage from "../VerifyPaymentPage";
 
 const ProtectedRoute = ({ children }) => {
   const location = useLocation();
@@ -67,6 +69,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/faculty" element={<Faculty />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/mycourses" element={<MyCoursePage />} />
+
         <Route
           path="/course/:id"
           element={
@@ -84,6 +88,8 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="/booking/success" element={<VerifyPaymentPage />} />
+        <Route path="/booking/cancel" element={<VerifyPaymentPage />} />
       </Routes>
 
       <ScrollTopButton threshold={250} />

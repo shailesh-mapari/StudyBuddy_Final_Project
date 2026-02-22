@@ -100,7 +100,6 @@ const FacultyPage = () => {
                       className={`${facultyStyles.socialIcon} ${facultyStyles.socialIconInstagram}`}
                     >
                       <Instagram className={facultyStyles.socialIconSvg} />
-                      
                     </a>
                   </div>
                 </div>
@@ -109,7 +108,7 @@ const FacultyPage = () => {
           </div>
         </div>
       </div>
-      <style jsx> {facultyStyles.animations}</style>
+      <style> {facultyStyles.animations}</style>
     </div>
   );
 };

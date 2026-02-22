@@ -219,7 +219,7 @@ const Testimonial = () => {
           </div>
         ))}
       </div>
-      <style jsx>{testimonialStyles.animations}</style>
+      <style>{testimonialStyles.animations}</style>
     </section>
   );
 };

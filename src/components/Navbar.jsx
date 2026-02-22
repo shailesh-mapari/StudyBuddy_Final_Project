@@ -192,7 +192,7 @@
 //                   className={({ isActive }) => mobileLinkClass(isActive)}
 //                   onClick={() => setIsOpen(false)}
 //                 >
-//                   {/* 🔴 CHANGED: wrapper inside map */}
+//                   {/*  CHANGED: wrapper inside map */}
 
 //                   <div className={navbarStyles.mobileMenuIconContainer}>
 //                     <Icon size={18} className={navbarStyles.mobileMenuIcon} />
@@ -247,15 +247,16 @@ import {
   Users,
   X,
   Menu,
+  BookOpenText,
 } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { href, NavLink } from "react-router-dom";
 import { useAuth, useClerk, UserButton, useUser } from "@clerk/clerk-react";
 
 // useUser → user login आहे का ते तपासते
 // useAuth → token मिळवण्यासाठी
 // useClerk → signup / login popup उघडण्यासाठी
 // UserButton → profile + logout button
-const navItems = [
+const baseNav = [
   { name: "Home", icon: Home, href: "/" },
   { name: "Courses", icon: BookOpen, href: "/courses" },
   { name: "About", icon: BookMarked, href: "/about" },
@@ -274,7 +275,14 @@ const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
 
   const menuRef = useRef(null);
+  const isLoggedIn = isSignedIn && Boolean(localStorage.getItem("token"));
 
+  const navItems = isSignedIn
+    ? [
+        ...baseNav,
+        { name: "My Courses", icon: BookOpenText, href: "/mycourses" },
+      ]
+    : baseNav;
   // Fetch Clerk token on login
   useEffect(() => {
     const loadToken = async () => {

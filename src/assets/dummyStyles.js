@@ -30,7 +30,7 @@ export const bannerStyles = {
 
   // Heading
   heading:
-    "text-3xl sm:text-4xl lg:text-5xl font-cursive font-heading uppercase tracking-wider leading-tight",
+    "text-3xl sm:text-4xl lg:text-5xl font-cursive  font-heading uppercase tracking-wider leading-tight",
   headingSpan1:
     "block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 animate-text-gradient",
   headingSpan2:

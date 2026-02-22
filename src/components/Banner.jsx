@@ -32,12 +32,12 @@ const Banner = () => {
               New Features Available
             </span>
             <h1 className={bannerStyles.heading}>
-              <span className={bannerStyles.headingSpan1}>Build Amazing</span>
-              <span className={bannerStyles.headingSpan2}>Digital Product</span>
+              <span className={bannerStyles.headingSpan1}>Smart Start</span>
+              <span className={bannerStyles.headingSpan2}>Study partner</span>
             </h1>
             <p className={bannerStyles.description}>
               Create beautiful, responsive web applications with our powerful
-              tools abd components. Start building your next project today
+              tools and components. Enhance Your Acadamic Needs
             </p>
 
             {/*Features*/}
@@ -103,7 +103,7 @@ const Banner = () => {
           </div>
         </div>
       )}
-      <style jsx>{customStyles}</style>
+      <style>{customStyles}</style>
 
       <style>{`
         @keyframes fadeIn {

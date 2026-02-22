@@ -328,7 +328,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <style jsx>{aboutUsAnimations}</style>
+      <style>{aboutUsAnimations}</style>
     </div>
   );
 };
