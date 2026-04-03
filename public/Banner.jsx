@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { bannerStyles, customStyles } from "../assets/dummyStyles";
-import { features, floatingIcons } from "../assets/dummyBanner";
+import { bannerStyles, customStyles } from "../src/assets/dummyStyles";
+import { features, floatingIcons } from "../src/assets/dummyBanner";
 import { CircleCheckBig, Sparkle, X } from "lucide-react";
 import bannerImg from "../assets/Bannerimage.jpg";
-import video from "../assets/bannerVideo.mp4";
+import video from "../public/bannerVideo.mp4";
 const Banner = () => {
   const [showVideo, setShowVideo] = useState(false);
   return (
